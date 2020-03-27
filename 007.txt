@@ -1,0 +1,60 @@
+0. if not (money < 100): 上边这行代码相当于？
+if money < 100:
+1. assert 的作用是什?
+assert（断言）用于判断一个表达式，在表达式条件为 false 的时候触发异常;
+断言可以在条件不满足程序运行的情况下直接返回错误，而不必等待程序运行后出现崩溃的情况;
+语法格式：
+assert expression
+或者：
+if not expression:
+    raise AssertionError
+
+assert expression [, arguments]
+
+if not expression:
+    raise AssertionError(arguments)
+2. 假设有 x = 1，y = 2，z = 3，请问如何快速将三个变量的值互相交换？
+x = 1
+temp = x
+x = z
+Z = temp
+3. 猜猜 (x < y and [x] or [y])[0] 实现什么样的功能？
+
+4. 你听说过成员资格运算符吗
+in  和 not in
+
+
+
+
+0. 视频中小甲鱼使用 if-elif-else 在大多数情况下效率要比全部使用 if 要高，但根据一般的统计规律，一个班的成绩一般服从正态分布，也就是说平均成绩一般集中在 70~80 分之间，因此根据统计规律，我们还可以改进下程序以提高效率
+题目备忘：按照 100 分制，90 分以上成绩为 A，80 到 90 为 B，60 到 80 为 C，60 以下为 D，写一个程序，当用户输入分数，自动转换为ABCD 的形式打印。
+counts = 5
+while counts > 0:
+  score = int(input('请输入您的成绩:')) 
+  if score < 60:
+      print('D')
+  elif score in range(60,80):
+      print('C')
+  elif score in range(80,90):
+      print('B')
+  else:
+      print('A')
+  counts = counts -1
+
+print('测试结束')
+
+
+1. Python 的作者在很长一段时间不肯加入三元操作符就是怕跟 C 语言一样搞出国际乱码大赛，蛋疼的复杂度让初学者望而生畏，不过，如果你一旦搞清楚了三元操作符的使用技巧，或许一些比较复杂的问题反而迎刃而解。
+请将以下代码修改为三元操作符实现：
+x, y, z = 6, 5, 4
+if x < y:
+    small = x
+    if z < small:
+        small = z
+elif y < z:
+    small = y
+else:
+    small = z
+
+
+2. 请写下这一节课你学习到的内容：格式不限，回忆并复述是加强记忆的好方式！
