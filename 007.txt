@@ -56,5 +56,8 @@ elif y < z:
 else:
     small = z
 
+small = x if (x < y and x < z) else (y if y < z else z)
 
 2. 请写下这一节课你学习到的内容：格式不限，回忆并复述是加强记忆的好方式！
+
+if 循环可以用逻辑运算符简化
